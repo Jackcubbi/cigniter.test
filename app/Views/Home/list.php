@@ -1,3 +1,7 @@
-<?php
+<?= $this->extend("layouts/head") ?>
 
-echo '<h1>Hello posts page</h1>';
+<?= $this->section("title") ?> Lists <?= $this->endSection() ?>
+
+<?= $this->section("content") ?>
+<h1>Hello lists page</h1>
+<?= $this->endSection() ?>
