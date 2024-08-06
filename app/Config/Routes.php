@@ -7,3 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/list', 'Home::list');
+$routes->get('/tasks', 'Tasks::index');
