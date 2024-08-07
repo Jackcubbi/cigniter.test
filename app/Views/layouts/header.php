@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Главная</a>
+          <a class="nav-link" href="/cigniter.test">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">О нас</a>
+          <a class="nav-link" href="/cigniter.test/tasks">Задания</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Услуги</a>
