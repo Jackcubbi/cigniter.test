@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class Tasks extends BaseController
 {
-
+  //create task controller
   public function index(): string
   {
 
@@ -12,5 +12,18 @@ class Tasks extends BaseController
     $data = $model->findAll();
 
     return view('Tasks/index', ['tasks' => $data]);
+  }
+
+  //create show controller
+  public function show($id)
+  {
+    $model = new \App\Models\TasksModel();
+    $task = $model->find($id);
+
+    if ($task === null) {
+      # code... Проверка по ид
+    }
+
+    return view('Tasks/show', ['task' => $task]);
   }
 }

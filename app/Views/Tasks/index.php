@@ -8,7 +8,7 @@
 <ul>
   <?php foreach ($tasks as $task) : ?>
     <li>
-      <?= $task['title'] ?>
+      <a href="#"><?= $task['title'] ?></a>
       <?= $task['description'] ?>
       <?= $task['created_at'] ?>
     </li>
