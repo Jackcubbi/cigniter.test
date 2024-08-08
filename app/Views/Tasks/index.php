@@ -8,7 +8,9 @@
 <ul>
   <?php foreach ($tasks as $task) : ?>
     <li>
-      <a href="#"><?= $task['title'] ?></a>
+      <a href="<?= site_url("/tasks/" . $task['id']) ?>">
+        <?= $task['title'] ?>
+      </a>
       <?= $task['description'] ?>
       <?= $task['created_at'] ?>
     </li>
