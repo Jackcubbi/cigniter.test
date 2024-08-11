@@ -41,16 +41,24 @@ class Tasks extends BaseController
   {
     $model = new \App\Models\TasksModel();
 
-    $result = $model->insert([
+    $data = [
       'title' => $this->request->getPost('title'),
       'description' => $this->request->getPost('description'),
       'created_at' => $this->request->getPost('created_at')
-    ]);
+    ];
+
+    $result = $model->insert($data);
+
 
     if (!$result) {
-      return redirect()->back()->with('errors', $model->errors());
+      return redirect()
+        ->back()
+        ->withInput($data)
+        ->with('errors', $model->errors());
     } else {
-      dd($result);
+      return redirect()->to('/tasks')
+        ->with('success', 'Task created')
+        ->with('data', $data);
     }
   }
 }

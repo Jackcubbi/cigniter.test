@@ -24,7 +24,7 @@
       <label for="title">Title</label>
     </div>
     <div class="col-75">
-      <input type="text" id="title" name="title">
+      <input type="text" id="title" name="title" value="<?= old('title', isset($data['title']) ? $data['title'] : '') ?>">
     </div>
   </div>
   <div class="row">
@@ -32,7 +32,7 @@
       <label for="description">Description</label>
     </div>
     <div class="col-75">
-      <textarea id="description" name="description" placeholder="Write something.." style="height:200px"></textarea>
+      <textarea id="description" name="description" placeholder="Write something.." style="height:200px"><?= old('description', isset($data['description']) ? $data['description'] : '') ?></textarea>
     </div>
   </div>
   <div class="row">
@@ -40,7 +40,7 @@
       <label for="created_at">Created at</label>
     </div>
     <div class="col-75">
-      <input type="datetime-local" id="created_at" name="created_at">
+      <input type="datetime-local" id="created_at" name="created_at" value="<?= old('title', isset($data['title']) ? $data['title'] : '') ?>">
     </div>
   </div>
 
