@@ -5,6 +5,17 @@
 <?= $this->section("content") ?>
 <h1>Add task</h1>
 
+<?php if (session()->has('errors')): ?>
+
+  <ul>
+    <?php foreach (session('errors') as $item): ?>
+      <li><?= $item; ?></li>
+    <?php endforeach; ?>
+  </ul>
+
+
+<?php endif; ?>
+
 <?= form_open('tasks/store') ?>
 
 <div class="form-container">

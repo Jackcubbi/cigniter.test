@@ -11,8 +11,16 @@ class TasksModel extends \CodeIgniter\Model
   protected $allowedFields = ['title', 'description', 'created_at'];
 
   protected $validationRules = [
+    'title'         => 'required',
+    'description'   => 'required',
+  ];
 
-    'title' => 'required'
-
+  protected $validationMessages = [
+    'title' => [
+      'required' => 'Введите заголовок задания',
+    ],
+    'description' => [
+      'required' => 'Добавьте описание задания',
+    ],
   ];
 }

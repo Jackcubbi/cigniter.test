@@ -48,7 +48,7 @@ class Tasks extends BaseController
     ]);
 
     if (!$result) {
-      dd($model->errors());
+      return redirect()->back()->with('errors', $model->errors());
     } else {
       dd($result);
     }
