@@ -5,7 +5,7 @@
 <?= $this->section("content") ?>
 <h1>Task details:</h1>
 <p>ID: <?= $task['id'] ?></p>
-<p>Title: <?= $task['title'] ?></p>
-<p>Description: <?= $task['description'] ?></p>
-<p>Created At: <?= $task['created_at'] ?></p>
+<p>Title: <?= esc($task['title']) ?></p>
+<p>Description: <?= esc($task['description']) ?></p>
+<p>Created At: <?= esc($task['created_at']) ?></p>
 <?= $this->endSection() ?>

@@ -9,10 +9,10 @@
   <?php foreach ($tasks as $task) : ?>
     <li>
       <a href="<?= site_url("/tasks/" . $task['id']) ?>">
-        <?= $task['title'] ?>
+        <?= esc($task['title']) ?>
       </a>
-      <?= $task['description'] ?>
-      <?= $task['created_at'] ?>
+      <?= esc($task['description']) ?>
+      <?= esc($task['created_at']) ?>
     </li>
   <?php endforeach; ?>
 
