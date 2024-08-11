@@ -21,7 +21,7 @@
       <label for="description">Description</label>
     </div>
     <div class="col-75">
-      <textarea id="description" name="description" placeholder="Write something.." style="height:200px" required></textarea>
+      <textarea id="description" name="description" placeholder="Write something.." style="height:200px"></textarea>
     </div>
   </div>
   <div class="row">
@@ -29,7 +29,7 @@
       <label for="created_at">Created at</label>
     </div>
     <div class="col-75">
-      <input type="datetime-local" id="created_at" name="created_at" required>
+      <input type="datetime-local" id="created_at" name="created_at">
     </div>
   </div>
 
