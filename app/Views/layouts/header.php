@@ -7,13 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="/cigniter.test">Главная</a>
+          <a class="nav-link" href="<?= site_url() ?>">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/cigniter.test/tasks">Задания</a>
+          <a class="nav-link" href="<?= site_url('/tasks') ?>">Задания</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Услуги</a>
+          <a class="nav-link" href="<?= site_url('/tasks/add_task') ?>">Добавить задание</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Контакты</a>

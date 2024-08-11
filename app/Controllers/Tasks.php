@@ -34,4 +34,19 @@ class Tasks extends BaseController
   {
     return view('Tasks/add_task');
   }
+
+
+  //create new store controller
+  public function store()
+  {
+    $model = new \App\Models\TasksModel();
+
+    $model->insert([
+      'title' => $this->request->getPost('title'),
+      'description' => $this->request->getPost('description'),
+      'created_at' => $this->request->getPost('created_at')
+    ]);
+
+    dd($model->getInsertID());
+  }
 }
