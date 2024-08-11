@@ -14,6 +14,7 @@ class Tasks extends BaseController
     return view('Tasks/index', ['tasks' => $data]);
   }
 
+
   //create show controller
   public function show($id)
   {
@@ -25,5 +26,12 @@ class Tasks extends BaseController
     }
 
     return view('Tasks/show', ['task' => $task]);
+  }
+
+
+  //create new task controller
+  public function add_task()
+  {
+    return view('Tasks/add_task');
   }
 }
