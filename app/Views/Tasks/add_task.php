@@ -40,7 +40,7 @@
       <label for="created_at">Created at</label>
     </div>
     <div class="col-75">
-      <input type="datetime-local" id="created_at" name="created_at" value="<?= old('title', isset($data['title']) ? $data['title'] : '') ?>">
+      <input type="datetime-local" id="created_at" name="created_at" value="<?= old('created_at', isset($data['created_at']) ? $data['created_at'] : '') ?>">
     </div>
   </div>
 

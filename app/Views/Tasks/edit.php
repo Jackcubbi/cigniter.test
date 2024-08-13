@@ -24,7 +24,7 @@
       <label for="title">Title</label>
     </div>
     <div class="col-75">
-      <input type="text" id="title" name="title" value="<?= $task['title'] ?>">
+      <input type="text" id="title" name="title" value="<?= old('title', isset($task['title']) ? $task['title'] : '') ?>" required>
     </div>
   </div>
   <div class="row">
@@ -32,7 +32,7 @@
       <label for="description">Description</label>
     </div>
     <div class="col-75">
-      <textarea id="description" name="description" placeholder="Write something.." style="height:200px"><?= $task['description'] ?></textarea>
+      <textarea id="description" name="description" placeholder="Write something.." style="height:200px" required><?= old('description', isset($task['description']) ? $task['description'] : '') ?></textarea>
     </div>
   </div>
   <div class="row">
@@ -40,7 +40,7 @@
       <label for="created_at">Created at</label>
     </div>
     <div class="col-75">
-      <input type="datetime-local" id="created_at" name="created_at" value="<?= $task['created_at'] ?>">
+      <input type="datetime-local" id="created_at" name="created_at" value="<?= old('created_at', isset($task['created_at']) ? $task['created_at'] : '') ?>" required>
     </div>
   </div>
 

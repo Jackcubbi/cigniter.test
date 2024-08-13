@@ -45,7 +45,7 @@
     background-color: #f2f2f2;
     padding: 20px;
     max-width: 800px;
-
+    margin: auto;
   }
 
   .col-25 {
@@ -65,6 +65,25 @@
     content: "";
     display: table;
     clear: both;
+  }
+
+  ul.task-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+      padding: .5rem 0;
+
+      .task-head {
+        font-weight: 600;
+      }
+
+      .edit-task-btn {
+        float: right;
+      }
+    }
   }
 </style>
 
