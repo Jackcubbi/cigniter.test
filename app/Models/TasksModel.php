@@ -10,6 +10,8 @@ class TasksModel extends \CodeIgniter\Model
 
   protected $allowedFields = ['title', 'description', 'created_at'];
 
+  protected $returnType = 'App\Entities\Task';
+
   protected $validationRules = [
     'title'         => 'required',
     'description'   => 'required',
