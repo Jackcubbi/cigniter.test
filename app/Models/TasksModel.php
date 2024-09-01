@@ -9,13 +9,13 @@ class TasksModel extends \CodeIgniter\Model
 {
   protected $table = 'tasks';
 
+  protected $useTimestamps = true;
+
   protected $allowedFields = ['title', 'description', 'created_at'];
 
   protected $returnType = \App\Entities\Task::class;
 
   protected $useEntity = true;
-
-
 
   protected $validationRules = [
     'title'         => 'required',

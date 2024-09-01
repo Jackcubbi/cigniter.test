@@ -30,11 +30,7 @@ class Tasks extends BaseController
   public function show($id)
   {
 
-    $task = $this->model->find($id);
-
-    if ($task === null) {
-      # code... Проверка по ид
-    }
+    $task = $this->getTaskOr404($id);
 
     return view('Tasks/show', ['task' => $task]);
   }
@@ -71,7 +67,7 @@ class Tasks extends BaseController
   //create edit controller
   public function edit($id)
   {
-    $task = $this->model->find($id);
+    $task = $this->getTaskOr404($id);
 
     return view('Tasks/edit', ['task' => $task]);
   }
@@ -80,7 +76,7 @@ class Tasks extends BaseController
   //create update controller
   public function update($id)
   {
-    $task = $this->model->find($id);
+    $task = $this->getTaskOr404($id);
     $task->fill($this->request->getPost());
 
     /* if (! $task->hasChanged()) {
@@ -101,5 +97,23 @@ class Tasks extends BaseController
         ->withInput($task)
         ->with('errors', $this->model->errors());
     }
+  }
+
+  public function delete($id) {}
+
+
+
+
+  //create 404page controller
+  public function getTaskOr404($id)
+  {
+    $task = $this->model->find($id);
+
+    if ($task === null) {
+      # code... Проверка по ид
+      throw new \CodeIgniter\Exceptions\PageNotFoundException("Task with id: $id not found");
+    }
+
+    return $task;
   }
 }
