@@ -21,15 +21,21 @@
           <div class="task-right">
             <div class="edit-delete">
               <a class="edit-task-btn" href="<?= site_url("/tasks/edit/" . $task->id) ?>">edit</a>
-              <a class="edit-task-btn" href="<?= site_url("/tasks/delete/" . $task->id) ?>">delete</a>
+              <a onclick="return confirmDelete()" class="edit-task-btn" href="<?= site_url("/tasks/delete/" . $task->id) ?>">delete</a>
             </div>
           </div>
 
         </div>
       </li>
     <?php endforeach; ?>
-
-
   </ul>
 </div>
+
+<script>
+  function confirmDelete() {
+    return confirm("Вы действительно хотите удалить задание?");
+  }
+</script>
+
+
 <?= $this->endSection() ?>
