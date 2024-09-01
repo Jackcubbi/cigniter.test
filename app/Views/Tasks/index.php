@@ -10,15 +10,22 @@
   <ul class="task-list">
     <?php foreach ($tasks as $task) : ?>
       <li>
-        <div class="task-head">
-          <a href="<?= site_url("/tasks/" . $task->id) ?>">
-            <?= esc($task->title) ?>
-          </a>
-          <a class="edit-task-btn" href="<?= site_url("/tasks/edit/" . $task->id) ?>">edit</a>
-        </div>
-        <p><?= esc($task->description) ?></p>
-        <?= esc($task->created_at) ?>
+        <div class="task-box">
+          <div class="task-left">
+            <a href="<?= site_url("/tasks/" . $task->id) ?>">
+              <?= esc($task->title) ?>
+            </a>
+            <p><?= esc($task->description) ?></p>
+            <?= esc($task->created_at) ?>
+          </div>
+          <div class="task-right">
+            <div class="edit-delete">
+              <a class="edit-task-btn" href="<?= site_url("/tasks/edit/" . $task->id) ?>">edit</a>
+              <a class="edit-task-btn" href="<?= site_url("/tasks/delete/" . $task->id) ?>">delete</a>
+            </div>
+          </div>
 
+        </div>
       </li>
     <?php endforeach; ?>
 

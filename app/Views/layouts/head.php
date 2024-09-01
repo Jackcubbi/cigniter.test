@@ -76,8 +76,21 @@
       border-bottom: 1px solid #ccc;
       padding: .5rem 0;
 
-      .task-head {
-        font-weight: 600;
+      .task-box {
+        display: flex;
+        justify-content: space-between;
+
+        .task-left {
+          flex-basis: 85%;
+        }
+
+        .edit-delete {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          text-align: right;
+          height: 100%;
+        }
       }
 
       .edit-task-btn {

@@ -99,7 +99,20 @@ class Tasks extends BaseController
     }
   }
 
-  public function delete($id) {}
+  public function delete($id)
+  {
+    $task = $this->getTaskOr404($id);
+
+    if ($this->model->delete($id)) {
+      return redirect()
+        ->to('/tasks')
+        ->with('success', 'Task deleted');
+    } else {
+      return redirect()
+        ->back()
+        ->with('errors', $this->model->errors());
+    }
+  }
 
 
 
