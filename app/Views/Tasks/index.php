@@ -24,7 +24,6 @@
               <a onclick="return confirmDelete()" class="edit-task-btn" href="<?= site_url("/tasks/delete/" . $task->id) ?>">delete</a>
             </div>
           </div>
-
         </div>
       </li>
     <?php endforeach; ?>
