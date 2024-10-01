@@ -3,7 +3,8 @@
 <?= $this->section("title") ?>Add new task><?= $this->endSection() ?>
 
 <?= $this->section("content") ?>
-<h1>Add task</h1>
+
+<h1>User registration</h1>
 
 <?php if (session()->has('errors')): ?>
 

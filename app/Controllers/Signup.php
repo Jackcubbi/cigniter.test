@@ -8,6 +8,8 @@ class Signup extends BaseController
 {
   public function new(): string
   {
-    return view('Signup/new');
+    return view('Signup/new', [
+      'title'  =>   'Страница регистрации пользователей'
+    ]);
   }
 }
