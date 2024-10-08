@@ -79,7 +79,7 @@ class Tasks extends BaseController
 
     return view('Tasks/edit', [
       'task' => $task,
-      'title' => 'Task edit'
+      'title' => 'Task edit: ' . $task->title,
     ]);
   }
 
