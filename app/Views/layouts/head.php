@@ -12,6 +12,7 @@
   }
 
   input[type=text],
+  input[type=password],
   select,
   textarea {
     width: 100%;

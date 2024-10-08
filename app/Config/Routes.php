@@ -16,3 +16,4 @@ $routes->post('/tasks/update/(:num)', 'Tasks::update/$1');
 $routes->get('/tasks/delete/(:num)', 'Tasks::delete/$1');
 
 $routes->get('/signup/new', 'Signup::new');
+$routes->post('/signup/store', 'Signup::store');
