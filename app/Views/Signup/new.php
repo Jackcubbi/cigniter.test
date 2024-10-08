@@ -1,6 +1,6 @@
 <?= $this->extend("layouts/head") ?>
 
-<?= $this->section("title") ?>Add new task><?= $this->endSection() ?>
+
 
 <?= $this->section("content") ?>
 

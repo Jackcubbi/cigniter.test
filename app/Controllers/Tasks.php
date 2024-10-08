@@ -22,7 +22,10 @@ class Tasks extends BaseController
 
     $data = $this->model->findAll();
 
-    return view('Tasks/index', ['tasks' => $data]);
+    return view('Tasks/index', [
+      'tasks' => $data,
+      'title' => 'Task list'
+    ]);
   }
 
 
@@ -32,14 +35,19 @@ class Tasks extends BaseController
 
     $task = $this->getTaskOr404($id);
 
-    return view('Tasks/show', ['task' => $task]);
+    return view('Tasks/show', [
+      'task' => $task,
+      'title' => 'View task: ' . $task->title,
+    ]);
   }
 
 
   //create new task controller
   public function add_task()
   {
-    return view('Tasks/add_task');
+    return view('Tasks/add_task', [
+      'title' => 'Add new task'
+    ]);
   }
 
 
@@ -69,7 +77,10 @@ class Tasks extends BaseController
   {
     $task = $this->getTaskOr404($id);
 
-    return view('Tasks/edit', ['task' => $task]);
+    return view('Tasks/edit', [
+      'task' => $task,
+      'title' => 'Task edit'
+    ]);
   }
 
 
