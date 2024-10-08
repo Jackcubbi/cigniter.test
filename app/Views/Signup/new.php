@@ -17,37 +17,29 @@
 
 <?php endif; ?>
 
-<?= form_open('tasks/store') ?>
+<?= form_open('/signup/store') ?>
 
 <div class="form-container">
   <div class="row">
-    <div class="col-25">
-      <label for="title">Title</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="title" name="title" value="<?= old('title', isset($data['title']) ? $data['title'] : '') ?>">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="description">Description</label>
-    </div>
-    <div class="col-75">
-      <textarea id="description" name="description" placeholder="Write something.." style="height:200px"><?= old('description', isset($data['description']) ? $data['description'] : '') ?></textarea>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="created_at">Created at</label>
-    </div>
-    <div class="col-75">
-      <input type="datetime-local" id="created_at" name="created_at" value="<?= old('created_at', isset($data['created_at']) ? $data['created_at'] : '') ?>">
-    </div>
+    <label for="name"><b>Name</b></label>
+    <input type="text" name="name" id="name">
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" name="email" id="email">
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" name="password" id="password">
+
+    <label for="password_repeat"><b>Repeat Password</b></label>
+    <input type="password" name="password_repeat" id="password_repeat">
+    <hr>
+
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
   </div>
 
   <br>
   <div class="row">
-    <input type="submit" value="Add new task">
+    <input type="submit" class="register_btn" value="Registration">
   </div>
 </div>
 
