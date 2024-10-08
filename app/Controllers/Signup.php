@@ -12,4 +12,6 @@ class Signup extends BaseController
       'title'  =>   'Страница регистрации пользователей'
     ]);
   }
+
+  public function store() {}
 }
